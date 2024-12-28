@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html,body{
+      height: 120vh;
+      width: 100%;
+      background-color: #000;
+      font-family:"Montserrat" ;
+      padding: 16px 14px 0 14px;
+
+    }
+    .nav1{
+      border-radius: 20px;
+      background-color: #dee7e0;
+      width: 100%;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2%;
+
+    }
+    
+    nav ul{
+      display: flex;
+      list-style: none;
+      margin-top: 10px;
+    }
+    .nav1 ul li{
+      margin: 0 8%;
+      font-size: 2.5vh;
+    }
+    
+
+    .main{
+        height: 90%;
+        width: 100%;
+        padding: 2% 3%;
+        background-color: #dee7e0;
+        border-radius: 20px;
+        margin-top: 1%;
+        overflow-y: scroll;
+        display: flex;
+        /* flex-direction: column; */
+        /* align-items: center; */
+        flex-wrap: nowrap;
+
+    }
+
+    .main::-webkit-scrollbar {
+       display: none;
+    }
+    .article{
+        background-color: #000;
+        height: 26%;
+        width: 60%;
+        border-radius: 20px;
+        display: flex;
+        margin-bottom: 0.5%;
+    }
+    .img-con{
+        height: 100%;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        padding-left: 3%;
+    }
+    .img-con img{
+        height: 75%;
+        width: 70%;
+        object-fit: cover;
+        border-radius: 20px;
+        /* margin-right:  */
+    }
+    .info{
+        color: #fff;
+        padding: 10px 10px;
+        /* background-color: green; */
+        height: 100%;
+        width: 70%;
+        border-radius: 20px;
+    }
+    .info p{
+        font-size: 10px;
+        color: #c7c5c5;
+        text-align: end;   
+    }
+    .title-con{
+        height: 60%;
+        width: 100%;
+        /* background-color: red; */
+        overflow-y: scroll;
+    }
+    .title-con::-webkit-scrollbar {
+       display: none;
+    }
+    .action-btns{
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .btns button{
+        padding: 5px 10px ;
+        background-color: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        border-radius: 10px;
+        margin-left: 20px;
+    }
+    .card{
+        height: 300px;
+        width: 200px;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        border-radius: 20px;
+        background-color: #000;
+        color: #fff;
+        padding: 2% 0;
+        margin: 1.2%;
+    }
+    .card p{
+        color: #FFF;
+        font-size: 1.2vh;
+    }  
+    .card button{
+        background-color: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        border-radius: 8px;
+        padding: 5px 10px;
+    }  
+    .background-img{
+        height: 50px;
+        width: 50px;
+        
+        border-radius: 50%;
+    }
+    .logo{
+        text-wrap: nowrap;
+    }
+  
+    </style>
+</head>
+<body>
+    <nav class="nav1 ">
+        <ul class="d-flex ">
+          <li class="logo">News hub</li>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contacts</li>
+        </ul>
+    
+        <h2 onclick="redirectToProfile()"><%= user.username%></h2>
+    </nav>
+    <div class="main">
+
+        <% authors.forEach(function(author,index) { %>
+            <div class="card">
+                <img class="background-img mb-1" src="/images/profileimages/<%= user.avatar%>" alt="profile">
+                <h4><%= author.username%></h4>
+                <p class=""><%= author.email %></p>
+                
+                <button class="mt-5" onclick="redirectToMakeAuthor('<%= author.id%>')">MaKe author</button>
+            </div>
+          <% }); %>
+        <!-- <div class="article">
+            <div class="img-con">
+                <img src="" alt="">
+            </div>
+            <div class="info">
+                <div class="title-con">
+                    <h2></h2>
+                </div>
+                <div class="action-btns">
+                    <button>Edit</button>
+                    <button>Delet</button>
+                </div>
+            </div>
+        </div> -->
+        
+    </div>
+    <script>
+      
+      function redirectToMakeAuthor(id) {
+        window.location.href = '/make-author/'+ id ;
+      }
+      function redirectToProfile() {
+        window.location.href = '/profile';
+       }
+    </script>
+</body>
+</html>

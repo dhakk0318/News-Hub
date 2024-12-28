@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html , body{
+            height: 100vh;
+            width: 100%;
+        }
+        .main{
+            height: 100vh;
+            width: 100%;
+            background-color: #dee7e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border-radius: 20px; */
+        
+        }
+        .home-btn{
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            color: #000;
+            font-size: 3.5vh;
+            text-decoration: none;
+        }
+        .sub-con{
+            height: 50%;
+            width: 500px;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 20px;
+            color: #dee7e0;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+        }
+        input{
+            background-color: #dee7e0;
+        }
+
+        a{
+            color: #fff;
+            /* text-decoration: none; */
+
+        }
+
+        /* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+  
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <a class="home-btn" href="/">Home</a>
+        <div class="sub-con">
+            <h3 class="fs-1">Sign Up</h3>
+            <form class="form" action="/signup" method="post">
+                <input type="text" name="username" class="form-control mb-2 mt-3 username" id="" placeholder="Your Full Name" required>
+                <input type="email" class="form-control mt-3 eamil" name="email" id="" placeholder="Email" >
+                <input type="password" class="form-control mt-3 mb-4 password" name="password" id="" placeholder="password" required>
+                <button class="btn btn-secondary">Sign up</button>
+            </form>
+            <p class="mt-4">Already have a Account <a href="/signin">Sign in</a></p>
+        </div>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+        const usernameInput = document.querySelector('.username');
+        const passwordInput = document.querySelector('.password');
+        const emailInput = document.querySelector('.email');
+
+        if (!usernameInput.value.trim()|| !passwordInput.value.trim() | !emailInput.value.trim() ) {
+          event.preventDefault(); 
+          alert('Please fill all the details.');
+        }
+      });
+    </script>
+</body>
+</html>

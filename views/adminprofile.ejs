@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html,body{
+      height: 100vh;
+      width: 100%;
+      background-color: #000;
+      font-family:"Montserrat" ;
+      /* padding: 16px 14px 0 14px; */
+      padding-top: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+    }
+    .nav1{
+      border-radius: 20px;
+      background-color: #dee7e0;
+      width: 100%;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2%;
+      /* margin-top: 15px; */
+      /* margin: 0 2%; */
+    }
+    nav ul{
+      display: flex;
+      align-items: center;
+      list-style: none;
+      padding-top: 10px;
+    }
+    .nav1 ul li{
+      margin: 0 8%;
+      cursor: pointer;
+    }
+    .nav1 ul li a{
+      font-size: 2.5vh;
+      color: #000;
+      text-decoration: none;
+      text-wrap: nowrap;
+    }
+    .background-img{
+        height: 40vh;
+        width: 100%;
+        object-fit: fill;
+    }
+    
+    .profile-img-con{
+        position: absolute;
+        top: 22vh;
+        left: 40px;
+        background-color: #fff;
+        border: 6px solid #000;
+        height: 30vh;
+        width: 30vh;
+        border-radius: 50%;
+        /* overflow: hidden; */
+    }
+    .profile-img-con img{
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+    .upload-btn{
+        position: relative;
+        top: -15px;
+        left: 82px;
+        font-size: 10px;
+        color: #000;
+    }
+    .upload-Img {
+        display: none;
+    }
+    .main{
+        height: 85%;
+        width: 100%;
+        position: relative;
+        background-color: #dee7e0;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-top: 10px;
+        
+    }
+    
+    .info{
+        height: 50vh;
+        width: 100%;
+        /* background-color: red; */
+        display: flex;
+
+    }
+    .user-info{
+        height: 100%;
+        width: 25%;
+        /* background-color: gray; */
+        /* text-align: center; */
+        padding: 130px 0% 0 3%;
+    }
+    .user-info h2{
+        font-size: 40px;
+        
+    }
+    .user-info button{
+        display: inline-block;
+    }
+
+    .features-con{
+        height: 100%;
+        width: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: red; */
+    }
+    .featurs{
+        height: 50%;
+        width: 150px;
+        background-color: transparent;
+        border: 5px solid #4d4d4d;
+        font-size: 18px;
+        border-radius: 20px ;
+        margin: 0 2%;
+        text-align: center;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .featurs i{
+        font-size: 80px;
+    }
+        /* 
+    ##Device = Desktops
+    ##Screen = 1281px to higher resolution desktops
+*/
+
+
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+    .featurs{
+        height: 45%;
+        width: 120px;
+    }
+    .featurs i{
+        font-size: 70px;
+    }
+  
+  
+}
+  
+
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    .featurs{
+        height: 45%;
+        width: 120px;
+    }
+    .featurs i{
+        font-size: 70px;
+    }
+    .profile-img-con{
+        height: 25vh;
+        width: 25vh;
+        top: 24vh ;
+    }
+    .features-con{
+        width: 70%;
+    }
+    .user-info{
+        width: 30%;
+        padding-top: 100px;
+    }
+    .user-info h4{
+        font-size: 17px;
+    }
+    .user-info button{
+        font-size: 15px;
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .featurs{
+        height: 30%;
+        width: 80px;
+    }
+    .featurs i{
+        font-size: 40px;
+    }
+    .featurs p{
+        font-size: 12px;
+    }
+    .profile-img-con{
+        height: 25vh;
+        width: 25vh;
+        top: 24vh ;
+    }
+    .features-con{
+        width: 70%;
+        flex-wrap: wrap;
+    }
+    .user-info{
+        width: 30%;
+        padding-top: 100px;
+    }
+    .user-info h4{
+        font-size: 17px;
+    }
+    .user-info button{
+        font-size: 15px;
+    }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+  
+}
+    </style>
+</head>
+<body>
+    <nav class="nav1 ">
+        <ul class="d-flex ">
+            <li class="logo"><a href="">News Hub</a></li>
+            <li ><a href="/">Home</a></li>
+            <li ><a href="/About">About</a></li>
+            <li ><a href="/Contacts">Contacts</a></li>
+        </ul>
+    
+        <h2><%= user.username%></h2>
+    </nav>
+    <div class="main">
+        <img class="background-img" src="/images/download (12) (1).jpg" alt=""><div class="line"></div>
+        <div class="profile-img-con">
+            <img class="profile-img" src="/images/profileimages/<%= user.avatar%>" alt="">
+            <form action="/profile-upload" method="post" enctype="multipart/form-data">
+                <input class="upload-Img" name="avatar" type="file" />
+                <button class="upload-btn btn btn-secondary " type="submit">Upload</button>
+            </form>
+        </div>
+        <div class="info">
+            <div class="user-info">
+                <h2 class="mt-4 fw-bold"><%= user.username %></h2>
+                <h4 class=" fw-medium mt-2"><%=user.email %></h4>
+                <button onclick="redirectToUpdateuser()" class="btn btn-dark mt-3">edit profile</button>
+                <button class="btn btn-dark mt-3 ms-3" onclick="redirectToLogout()">log out</button>
+            </div>
+            <div class="features-con">
+                <div onclick="redirectToFindUsers()" class="users featurs">
+                    <i class="ri-shield-user-fill"></i>
+                    <p>USERS</p>
+                </div>
+                <div onclick="redirectToArticleReach()"  class="article-reach featurs">
+                    <i class="ri-bar-chart-2-fill"></i>
+                    <p>REACH</p>
+                </div>
+                <div onclick="redirectToFindAuthors()" class="authors featurs">
+                    <i class="ri-user-2-fill"></i>
+                    <p>AUTHORS</p>
+                </div>
+                <div onclick="redirectTofeedAuthor()" class="authors featurs">
+                    <i class="ri-user-star-line"></i>
+                    <p>MAKE AUTHOR</p>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+    <script>
+        const profilePic = document.querySelector(".profile-img");
+        const uploadImg = document.querySelector(".upload-Img");
+        profilePic.addEventListener("click", () => {
+            uploadImg.click();
+        }); 
+        function redirectToFindUsers() {
+            window.location.href = '/find-users';
+        }
+        function redirectToUpdateuser() {
+            window.location.href = '/updateuser';
+        }
+        function redirectToFindAuthors() {
+            window.location.href = '/find-Authors';
+        }
+        function redirectTofeedAuthor() {
+            window.location.href = '/feed-author';
+        }
+        function redirectToArticleReach() {
+            window.location.href = '/Article-reach';
+        }
+        function redirectToLogout() {
+            window.location.href = '/logout';
+        }
+    </script>
+</body>
+</html>

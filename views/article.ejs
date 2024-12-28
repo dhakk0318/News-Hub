@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+    
+    <style>
+        *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html,body{
+      height: 120vh;
+      width: 100%;
+      background-color: #000;
+      font-family:"Montserrat" ;
+      padding: 16px 14px 0 14px;
+
+    }
+    .nav1{
+      border-radius: 20px;
+      background-color: #dee7e0;
+      width: 100%;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2%;
+
+    }
+    
+    nav ul{
+      display: flex;
+      list-style: none;
+    }
+    .nav1 ul li{
+      margin: 0 8%;
+      cursor: pointer;
+    }
+    .nav1 ul li a {
+        font-size: 2.5vh;
+        color: #000;
+        text-decoration: none;
+        text-wrap: nowrap;
+    }
+
+    .nav2{
+      border-radius: 20px;
+      background-color: #dee7e0;
+      width: 100%;
+      height: 6vh;
+      display: flex;
+      border: none;
+    }
+    .left-border{
+      height: 100%;
+      width: 8%;
+      background-color: #000;
+      border-radius: 20px;
+    }
+    
+    .center-artical-nav{
+      height: 100%;
+      width: 84%;
+      display: flex;
+      align-items: center ;
+      padding: 0 4%;
+      /* overflow: hidden; */
+      overflow-x: scroll;
+    }
+    .center-artical-nav::-webkit-scrollbar {
+       display: none;
+    }
+    .center-artical-nav ul{
+      height: 100%;
+      width: 100%;
+    }
+
+    .center-artical-nav ul li{
+      margin: 0 6% 0 0;
+      height: 100%;
+      /* width: 200px; */
+      background-color: #000;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 15px;
+      
+    }
+    
+    .center-artical-nav ul li a{
+      text-decoration: none;
+      color: #fff;
+
+    }
+    
+    .right-border{
+      height: 100%;
+      width: 8%;
+      background-color: #000;
+      border: none;
+      border-radius: 20px;
+    }
+    .main{
+        height: 90%;
+        width: 100%;
+        border-radius: 20px;
+        background-color: #dee7e0;
+        padding: 2% 5%;
+        display: flex;
+        align-items: center   ;
+        overflow-y: scroll;
+        flex-direction: column;
+    }
+    .main::-webkit-scrollbar {
+       display: none;
+    }
+    .main img{
+      width: 50%;
+      border-radius: 20px;
+      padding-top: 1%;
+      margin-bottom: 2%;
+    }
+    .main h1{
+      padding: 0 3%;
+      font-size: 5vh;
+      text-align: center;
+    }
+    .contant{
+      padding: 3% 3%;
+      line-height: 30px;
+      word-spacing: 7px;
+    }
+    .savebtn {
+      padding: 10px 18px ;
+      background-color: rgb(77, 181, 242);
+      color:#fff;
+      margin-top: 20px;
+      border: none;
+      border-radius: 20px;
+    }
+    /* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .main img{
+      width: 80%;
+    }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  .main img{
+      width: 90%;
+    }
+    .main h1{
+      padding: 2% 3%;
+      font-size: 4vh;
+      text-align: center;
+    }
+    .contant{
+      padding: 3% 3%;
+      line-height: 30px;
+      word-spacing: 7px;
+    }
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  .nav1 ul li a{
+    display: none;
+    
+  }
+  .main img{
+      width: 90%;
+    }
+    .main h1{
+      padding: 2% 3%;
+      font-size: 3.5vh;
+      text-align: center;
+    }
+    .contant{
+      padding: 3% 3%;
+      line-height: 30px;
+      word-spacing: 7px;
+    }
+    .Date{
+      font-size: 10px;
+    }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .nav1 ul li a{
+    display: none;
+    
+  }
+  .main img{
+      width: 90%;
+      margin-top: 3%;
+    }
+    .main h1{
+      padding: 2% 3%;
+      font-size: 3vh;
+      text-align: center;
+    }
+    .contant{
+      padding: 3% 3%;
+      line-height: 30px;
+      word-spacing: 7px;
+    }
+    .Date{
+      font-size: 7px;
+      margin-top: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <nav class="nav1 ">
+      <ul class="d-flex ">
+        <li class="logo"><a href="">News Hub</a></li>
+        <li ><a href="/">Home</a></li>
+        <li ><a href="/About">About</a></li>
+        <li ><a href="/Contacts">Contacts</a></li>
+      </ul>
+        
+    <h2 onclick="redirectToProfile()"><%= user.username%></h2>
+    </nav>
+    <nav class="nav2">
+        <div class="left-border">
+        </div>
+        <div class="center-artical-nav">
+          <ul>
+            <li><a href="/articles/Politics">Politics</a></li>
+            <li><a href="/articles/Business">Business</a></li>
+            <li><a href="/articles/Technology">Technology</a></li>
+            <li><a href="/articles/Science">Science</a></li>
+            <li><a href="/articles/Health">Health</a></li>
+            <li><a href="/articles/Sports">Sports</a></li>
+            <li><a href="/articles/Entertainment">Entertainment</a></li>
+            <li><a href="/articles/Environment">Environment</a></li>
+            <li><a href="/articles/Lifestyl">Lifestyl</a></li>
+            <li><a href="/articles/Education">Education</a></li>
+          </ul>
+          <div class="blank"></div>
+        </div>
+        <div class="right-border"></div>
+    </nav>
+    <div class="main">
+      <p class="Date"><%= article.createdAt.toLocaleDateString('en-IN', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+      })%></p>
+      <img src="/images/articleimages/<%= article.Image %>" alt="">
+      <h1><%= article.Title %></h1>
+      <p class="contant"><%= article.Content %></p>
+      <button class="savebtn" onclick="redirectTosave('<%= article._id %>')">save</button>
+    </div>
+<script>
+  function redirectToProfile() {
+    window.location.href = '/profile';
+  }
+  function redirectTosave(id) {
+    window.location.href = '/save/' + id;
+  }
+</script>
+</body>
+</html>

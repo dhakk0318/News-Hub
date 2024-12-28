@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+    <style>
+        *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html,body{
+      height: 100vh;
+      width: 100%;
+      background-color: #000;
+      font-family:"Montserrat" ;
+      padding: 16px 14px 0 14px;
+
+    }
+    .nav1{
+      border-radius: 20px;
+      background-color: #dee7e0;
+      width: 100%;
+      height: 10vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2%;
+    }
+    
+    nav ul{
+      display: flex;
+      list-style: none;
+    }
+    .nav1 ul li{
+      margin: 0 8%;
+      cursor: pointer;
+    }
+    .nav1 ul li a {
+        font-size: 2.5vh;
+        color: #000;
+        text-decoration: none;
+        text-wrap: nowrap;
+    }
+
+    .nav2{
+      border-radius: 20px;
+      background-color: #dee7e0;
+      width: 100%;
+      height: 6vh;
+      display: flex;
+      border: none;
+    }
+    .left-border{
+      height: 100%;
+      width: 8%;
+      background-color: #000;
+      border-radius: 20px;
+    }
+    
+    .center-artical-nav{
+      height: 100%;
+      width: 84%;
+      display: flex;
+      align-items: center ;
+      padding: 0 4%;
+      /* overflow: hidden; */
+      overflow-x: scroll;
+    }
+    .center-artical-nav::-webkit-scrollbar {
+       display: none;
+    }
+    .center-artical-nav ul{
+      height: 100%;
+      width: 100%;
+    }
+
+    .center-artical-nav ul li{
+      margin: 0 6% 0 0;
+      height: 100%;
+      /* width: 200px; */
+      background-color: #000;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 15px;
+      
+    }
+    
+    .center-artical-nav ul li a{
+      text-decoration: none;
+      color: #fff;
+
+    }
+    
+    .right-border{
+      height: 100%;
+      width: 8%;
+      background-color: #000;
+      border: none;
+      border-radius: 20px;
+    }
+    .main{
+      height: 90%;
+      width: 100%;
+      border-radius: 20px;
+      background-color: #dee7e0;
+      padding: 2%;
+      display: flex;
+    }
+    .top-news{
+      height: 100%;
+      width: 25%;
+      border: 2px solid #363636;
+      border-radius: 20px;
+      overflow-y: scroll;
+      margin: 2px auto;
+    }
+    .top-news::-webkit-scrollbar {
+       display: none;
+    }
+    .top-news h6{
+      text-align: center;
+      font-size: 15px;
+      font-weight: 500;
+      margin-top: 5px;
+    }
+        
+    .toparticle{
+      height: 30%;
+      width: 90%;
+      background-color: #000;
+      border-radius: 20px;
+      color:#fff ;
+      margin: 2% auto;
+      padding: 2% 2%;
+      text-align: center;
+    }
+    .toparticle p{
+      font-size: 8px;
+      text-align: center;
+    }
+    .top-title{
+      margin-top: 10px;
+      width: 100%;
+      height: 64%;
+      font-size: 15px;
+      text-align: center;
+      font-weight: 500;
+      /* background-color: #fff; */
+      overflow-y: scroll;
+    }
+    .top-title::-webkit-scrollbar {
+       display: none;
+    }
+    .toparticle a{
+      color: #fff;
+      margin-top: 15px;
+    }
+    .new-articles{
+        height: 100%;
+        width: 73%;
+        border: 2px solid #000;
+        border-radius: 20px;
+        margin-left: 2%;
+        /* display: flex;
+        flex-direction: column; */
+        overflow-y: scroll;
+    }
+    .new-articles::-webkit-scrollbar {
+       display: none;
+    }
+    .article{
+      height: 25%;
+      width: 80%;
+      background-color: #000;
+      border-radius: 20px;
+      margin: 2% auto;
+      display: flex;
+
+    }
+    .img-con{
+        height: 100%;
+        width: 30%;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        padding-left: 3%;
+    }
+    .img-con img{
+        height: 75%;
+        width: 70%;
+        object-fit: cover;
+        border-radius: 20px;
+        /* margin-right:  */
+    }
+    .info{
+        color: #fff;
+        padding: 10px 15px 10px 10px;
+        /* background-color: green; */
+        height: 100%;
+        width: 70%;
+        border-radius: 20px;
+    }
+    .info p{
+        font-size: 10px;
+        color: #fff;
+        text-align: end;
+        margin-bottom: 20px; 
+        padding-right: 5px; 
+    }
+    .title-con{
+        height: 45%;
+        width: 100%;
+        /* background-color: red; */
+        overflow-y: scroll;
+        margin-bottom: 20px;
+    }
+    .title-con::-webkit-scrollbar {
+      display: none;
+    }
+    .action-btns{
+      /* height: 20%; */
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+@media (min-width: 1281px) {
+ 
+  
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  .new-articles{
+    height: 100%;
+    width: 67%;
+  }
+  .article{
+    height: 25%;
+    width: 90%;
+  }
+  .top-news{
+      height: 100%;
+      width: 30%;
+    }
+        
+    /* .toparticle{
+      height: 30%;
+      width: 90%;
+      background-color: #000;
+      border-radius: 20px;
+      color:#fff ;
+      margin: 2% auto;
+      padding: 2% 2%;
+      text-align: center;
+    } */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .new-articles{
+    height: 100%;
+    width: 67%;
+  }
+  .article{
+    height: 25%;
+    width: 90%;
+  }
+  .top-news{
+      height: 100%;
+      width: 30%;
+  }
+  .toparticle{
+      height: 25%;
+  }
+  .top-title h2{
+    font-size: 18px;
+  }
+  .article{
+    height: 20%;
+  }
+  .title-con{
+    height: 30%;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .nav1 ul li{
+    margin: 0 2%;
+      
+  }
+  .nav1 ul li a{
+    font-size: 1.8vh;
+    
+  }
+  .logo{
+    padding-right: 30px;
+  }
+  .nav1 h2{
+    font-size: 18px;
+  }
+  .new-articles{
+    height: 100%;
+    width: 100%;
+    padding-top: 2%;
+  }
+  .article{
+    height: 20%;
+    width: 90%;
+  }
+  .top-news{
+    display: none;
+  }
+
+  .article h2{
+    font-size: 20px ;
+  }
+  .info p{
+    font-size: 8px;
+  }
+  .title-con{
+    height: 38%;
+  }
+  .action-btns{
+    height: 10%;
+  }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .nav1 ul li a{
+    display: none;
+    
+  }
+  .logo{
+    padding-right: 30px;
+  }
+  .nav1 h2{
+    font-size: 20px;
+  }
+  .new-articles{
+    height: 100%;
+    width: 100%;
+  }
+  .article{
+    height: 20%;
+    width: 90%;
+  }
+  .top-news{
+    display: none;
+  }
+
+  .article h2{
+    font-size: 14px ;
+  }
+  .title-con{
+    height: 38%;
+  }
+  .action-btns{
+    height: 10%;
+  }
+  .info p{
+    font-size: 5px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <nav class="nav1 ">
+      <ul class="d-flex ">
+        <li class="logo"><a href="">News Hub</a></li>
+        <li ><a href="/">Home</a></li>
+        <li ><a href="/About">About</a></li>
+        <li ><a href="/Contacts">Contacts</a></li>
+      </ul>
+        
+      <h2 onclick="redirectToProfile()"><%= user.username%></h2>
+
+    </nav>
+    <nav class="nav2">
+        <div class="left-border">
+        </div>
+        <div class="center-artical-nav">
+          <ul>
+            <li><a href="/articles/Politics">Politics</a></li>
+            <li><a href="/articles/Business">Business</a></li>
+            <li><a href="/articles/Technology">Technology</a></li>
+            <li><a href="/articles/Science">Science</a></li>
+            <li><a href="/articles/Health">Health</a></li>
+            <li><a href="/articles/Sports">Sports</a></li>
+            <li><a href="/articles/Entertainment">Entertainment</a></li>
+            <li><a href="/articles/Environment">Environment</a></li>
+            <li><a href="/articles/Lifestyl">Lifestyl</a></li>
+            <li><a href="/articles/Education">Education</a></li>
+          </ul>
+          <div class="blank"></div>
+        </div>
+        <div class="right-border"></div>
+    </nav>
+    <div class="main">
+        <div class="top-news">
+          <h6>TOP</h6>
+          <% Toparticles.forEach(function(article,index) { %>
+            <div class="toparticle">
+              <p><%= article.createdAt.toLocaleDateString('en-IN', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric',
+              })%></p>
+              <div class="top-title">
+  
+                <h2><%= article.Title %></h2>
+              </div>
+              <a href="/article/<%= article.id%>">read more</a>
+            </div>
+          <% }); %>
+        </div>
+        <div class="new-articles">
+          <% articles.forEach(function(article,index) { %>
+            <div class="article">
+                <div class="img-con">
+                    <img src="/images/articleimages/<%= article.Image %>" alt="">
+                </div>
+                <div class="info">
+                    <p><%= article.createdAt.toLocaleDateString('en-IN', {
+                      day: '2-digit',
+                      month: '2-digit',
+                      year: 'numeric',
+                    })%></p>
+                    <div class="title-con">
+                        <h2><%= article.Title %></h2>
+                    </div>
+                    <div class="action-btns">
+                        <p><%= article.Category%></p>
+                        <a href="/article/<%= article.id%>">read more</a>
+                    </div>
+                </div>
+            </div>
+          <% }); %>
+          <div class="article">
+
+          </div>
+          <div class="article">
+
+          </div>
+          <div class="article">
+
+          </div>
+          <div class="article">
+
+          </div>
+          <div class="article">
+
+          </div>
+          <div class="article">
+
+          </div>
+        </div>
+    </div>
+<script>
+  function redirectToProfile() {
+    window.location.href = '/profile';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title%></title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 200vh;
+        width: 100%;
+        background-color: #000;
+        font-family: "Montserrat";
+        padding: 16px 14px 0 14px;
+      }
+      .nav1 {
+        border-radius: 20px;
+        background-color: #dee7e0;
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2%;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+      .nav1 ul li {
+        margin: 0 8%;
+        cursor: pointer;
+        text-wrap: nowrap;
+      }
+      .nav1 ul li a {
+        font-size: 2.5vh;
+        color: #000;
+        text-decoration: none;
+      }
+      #Signin-btn {
+        font-size: 20px;
+        padding: 10px 30px;
+        background-color: #434343;
+        color: #fff;
+        border-radius: 10px;
+        border: none;
+      }
+      .nav2 {
+        /* border-radius: 20px; */
+        background-color: #dee7e0;
+        width: 100%;
+        height: 6vh;
+        display: flex;
+        border-left: none;
+      }
+      .left-border {
+        height: 100%;
+        width: 8%;
+        background-color: #000;
+        border-radius: 20px;
+        border: none;
+        margin: none;
+      }
+
+      .center-artical-nav {
+        height: 100%;
+        width: 84%;
+        display: flex;
+        align-items: center;
+        padding: 0 4%;
+        /* overflow: hidden; */
+        overflow-x: scroll;
+        border: none;
+      }
+      .center-artical-nav::-webkit-scrollbar {
+        display: none;
+      }
+      .center-artical-nav ul {
+        height: 100%;
+        width: 100%;
+      }
+
+      .center-artical-nav ul li {
+        margin: 0 6% 0 0;
+        height: 100%;
+        /* width: 200px; */
+        background-color: #000;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+      }
+
+      .center-artical-nav ul li a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .right-border {
+        height: 100%;
+        width: 8%;
+        background-color: #000;
+        border: none;
+        border-radius: 20px;
+      }
+      .main {
+        height: 90%;
+        width: 100%;
+        background-color: #000;
+        border-radius: 20px;
+      }
+      .page1 {
+        height: 50%;
+        width: 100%;
+        display: flex;
+      }
+      .page1-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 100%;
+        /* background-color: red; */
+        padding-bottom: 5%;
+      }
+      .page1-right {
+        width: 60%;
+        height: 100%;
+        text-align: center;
+        padding: 60px 0;
+      }
+      .page1-right h1 {
+        /* margin: auto; */
+        color: #dee7e0;
+        font-size: 10vh;
+      }
+      .page1-right h2 {
+        padding-top: 25px;
+        color: #dee7e0;
+        font-size: 3.4vh;
+      }
+      .page1-right p {
+        margin: auto;
+
+        font-weight: 400;
+        font-size: 15px;
+        margin-top: 30px;
+        line-height: 20px;
+        color: #d1dcd3;
+        width: 68%;
+      }
+
+      /* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+      @media (min-width: 1281px) {
+      }
+
+      /* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+      @media (min-width: 1025px) and (max-width: 1280px) {
+        .article {
+          width: 90%;
+        }
+        .toparticle {
+          width: 90%;
+        }
+        .top-title h2 {
+          font-size: 2.5vh;
+        }
+        .title-con h2 {
+          font-size: 2.5vh;
+        }
+      }
+
+      /* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .right-info-con img {
+          height: 80%;
+        }
+        .left-main-info-con h1 {
+          font-size: 4vw;
+          margin-bottom: 15px;
+          margin-top: 70px;
+        }
+        .left-main-info-con h2 {
+          font-size: 2vw;
+          font-weight: 500;
+        }
+        .toparticle {
+          width: 95%;
+          height: 18%;
+        }
+        .top-title h2 {
+          font-size: 2vw;
+        }
+        .article {
+          width: 95%;
+          height: 15%;
+        }
+        .article a {
+          font-size: 12px;
+        }
+        .title-con h2 {
+          font-size: 2vw;
+        }
+      }
+
+      /* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+      @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+      }
+
+      /* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+      @media (min-width: 481px) and (max-width: 767px) {
+        .nav1 ul li {
+          margin: 0 2%;
+        }
+        .nav1 ul li a {
+          font-size: 1.8vh;
+        }
+        .logo {
+          padding-right: 20vw;
+        }
+        .main-info-Con {
+          display: flex;
+          flex-direction: column;
+        }
+        .left-main-info-con {
+          width: 100%;
+          /* background-color: red; */
+          text-align: center;
+          /* padding: 4% 2%; */
+        }
+
+        .left-main-info-con h1 {
+          font-size: 10vw;
+          margin-bottom: 15px;
+        }
+        .left-main-info-con h2 {
+          font-size: 5vw;
+          font-weight: 500;
+        }
+        .right-info-con {
+          width: 100%;
+          /* background-color: blue; */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .right-info-con img {
+          height: 50vh;
+          margin-right: 30px;
+        }
+      }
+
+      /* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+      @media (min-width: 320px) and (max-width: 480px) {
+        /* CSS */
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav1">
+      <ul class="d-flex">
+        <li class="logo"><a href="">News Hub</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/About">About</a></li>
+        <li><a href="/Contacts">Contacts</a></li>
+      </ul>
+
+      <button
+        class="btn btn-dark fs-5"
+        id="Signin-btn"
+        onclick="redirectToSingIn()"
+      >
+        Sing in
+      </button>
+    </nav>
+    <div class="main">
+      <div class="page1">
+        <div class="page1-left">
+          <img src="/images/those-that-inspire_ Photo (1) (1).gif" alt="" />
+        </div>
+        <div class="page1-right">
+          <h1>News Hub</h1>
+          <h2>Where Knowledge Meets Discovery</h2>
+          <p>
+            Welcome to News Hub Hero, your trusted destination for breaking news
+            from around the globe. We are your front-row seat to the most
+            compelling stories, providing you with up-to-the-minute updates on
+            politics, business, technology, entertainment, and more.Our dedicated team of journalists and reporters is committed to delivering accurate, unbiased, and timely news that empowers you to stay informed and engaged in today's fast-paced 
+          </p>
+          <p>At News Hub Hero, we believe in the power of information to shape perspectives, drive change, and connect people across borders. Our mission is to be your hero in the world of news, helping you navigate the complexities of our ever-changing world. Whether it's the latest developments in international affairs or the trends shaping your local community, we're here to keep you in the know.</p>
+        </div>
+      </div>
+      <div class="page2">
+        <div class="page2-left"></div>
+        <div class="page2-right"></div>
+      </div>
+    </div>
+    <script>
+      function redirectToSingIn() {
+        window.location.href = "/Signin";
+      }
+    </script>
+  </body>
+</html>
